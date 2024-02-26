@@ -27,7 +27,13 @@ def main(weather_data):
                 afternoon_temps.append(entry["average_temperature"])
                 afternoon_rains.append(entry["probability_of_rain"])
 
-        summary = ["Day: " + day.strftime("%A %B %d").replace(" 0", " ") + "\n\n",
+        summary = get_summary(day, morning_temps, morning_rains, afternoon_temps, afternoon_rains, all_temps)
+        summaries.append(summary)
+        print("".join(summary))
+    return summaries
+
+def get_summary(day, morning_temps, morning_rains, afternoon_temps, afternoon_rains, all_temps):
+    summary = ["Day: " + day.strftime("%A %B %d").replace(" 0", " ") + "\n\n",
                    "Morning Average Temperature: ", "Insufficient forecast data" if not morning_temps else str(round(
                        sum(morning_temps) / len(morning_temps))) + "\n",
                    "Morning Chance Of Rain: ", "Insufficient forecast data" if not morning_rains else str(round(
@@ -38,9 +44,8 @@ def main(weather_data):
                        sum(afternoon_rains) / len(afternoon_rains), 2)) + "\n",
                    "High Temperature: " + str(max(all_temps)) + "\n",
                    "Low Temperature: " + str(min(all_temps)) + "\n"]
-        summaries.append(summary)
-        print("".join(summary))
-    return summaries
+               
+    return summary
 
 def get_weather_data():
     url = "https://e75urw7oieiszbzws4gevjwvze0baaet.lambda-url.eu-west-2.on.aws/"
