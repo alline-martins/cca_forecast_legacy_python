@@ -1,0 +1,5 @@
+from src.app import main
+
+def test_example():
+    result = main()
+    assert result == [['Day: Sunday February 18\n\n', 'Morning Average Temperature: ', '10\n', 'Morning Chance Of Rain: ', '0.14\n', 'Afternoon Average Temperature: ', '16\n', 'Afternoon Chance Of Rain: ', '0.4\n', 'High Temperature: 17\n', 'Low Temperature: 6\n'], ['Day: Monday February 19\n\n', 'Morning Average Temperature: ', '10\n', 'Morning Chance Of Rain: ', '0.14\n', 'Afternoon Average Temperature: ', '16\n', 'Afternoon Chance Of Rain: ', '0.4\n', 'High Temperature: 17\n', 'Low Temperature: 6\n'], ['Day: Tuesday February 20\n\n', 'Morning Average Temperature: ', '10\n', 'Morning Chance Of Rain: ', '0.14\n', 'Afternoon Average Temperature: ', '16\n', 'Afternoon Chance Of Rain: ', '0.4\n', 'High Temperature: 17\n', 'Low Temperature: 6\n']]
