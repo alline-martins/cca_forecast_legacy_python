@@ -1,0 +1,27 @@
+Day: Sunday February 18
+
+Morning Average Temperature: 10
+Morning Chance Of Rain: 0.14
+Afternoon Average Temperature: 16
+Afternoon Chance Of Rain: 0.4
+High Temperature: 17
+Low Temperature: 6
+
+Day: Monday February 19
+
+Morning Average Temperature: 10
+Morning Chance Of Rain: 0.14
+Afternoon Average Temperature: 16
+Afternoon Chance Of Rain: 0.4
+High Temperature: 17
+Low Temperature: 6
+
+Day: Tuesday February 20
+
+Morning Average Temperature: 10
+Morning Chance Of Rain: 0.14
+Afternoon Average Temperature: 16
+Afternoon Chance Of Rain: 0.4
+High Temperature: 17
+Low Temperature: 6
+
