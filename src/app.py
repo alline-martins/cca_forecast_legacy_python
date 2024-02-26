@@ -3,9 +3,7 @@ from collections import defaultdict
 import requests
 
 
-def main():
-    weather_data = get_weather_data()
-
+def main(weather_data):
     grouped_by_day = defaultdict(list)
     summaries = []
     # Group entries by day
@@ -54,4 +52,5 @@ def get_weather_data():
     return weather_data
 
 if __name__ == "__main__":
-    main()
+    weather_data = get_weather_data()
+    main(weather_data)
