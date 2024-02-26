@@ -12,7 +12,7 @@ def main():
     weather_data = response.json()
 
     grouped_by_day = defaultdict(list)
-    summaries = {}
+    summaries = []
     # Group entries by day
     for entry in weather_data:
         entry_time = datetime.fromisoformat(entry["date_time"].replace('Z', '+00:00'))
@@ -45,9 +45,9 @@ def main():
                        sum(afternoon_rains) / len(afternoon_rains), 2)) + "\n",
                    "High Temperature: " + str(max(all_temps)) + "\n",
                    "Low Temperature: " + str(min(all_temps)) + "\n"]
-
+        summaries.append(summary)
         print("".join(summary))
-
+    return summaries
 
 if __name__ == "__main__":
     main()
