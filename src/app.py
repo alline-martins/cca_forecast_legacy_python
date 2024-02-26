@@ -4,12 +4,7 @@ import requests
 
 
 def main():
-    url = "https://e75urw7oieiszbzws4gevjwvze0baaet.lambda-url.eu-west-2.on.aws/"
-
-    response = requests.get(url)
-    response.raise_for_status()
-
-    weather_data = response.json()
+    weather_data = get_weather_data()
 
     grouped_by_day = defaultdict(list)
     summaries = []
@@ -48,6 +43,15 @@ def main():
         summaries.append(summary)
         print("".join(summary))
     return summaries
+
+def get_weather_data():
+    url = "https://e75urw7oieiszbzws4gevjwvze0baaet.lambda-url.eu-west-2.on.aws/"
+
+    response = requests.get(url)
+    response.raise_for_status()
+
+    weather_data = response.json()
+    return weather_data
 
 if __name__ == "__main__":
     main()
